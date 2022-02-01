@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="btn1" class="btn_dev"> CLIQUE AQUI DEVELOPER</button>
+    <br>
+    <br>
+    <button class="btn"> SEGUNDO BOTAO</button>
+
+    <p>Criando um link para acesssar fora da página</p>
+    <a href="http://www.bb.com.br/pbb/pagina-inicial#/" target="_blank">Banco do Brasil</a>
+
+    <script>
+
+        function addElemento(){
+            let divNova = document.createElement('div')
+            let conteudoNovo = document.createTextNode('Olá, Devs!')
+
+            divNova.appendChild(conteudoNovo)
+
+            let divAtual = document.getElementById('div1')
+            document.body.insertBefore(divNova, divAtual)
+            
+        }
+
+        let bt = document.getElementById('btn1')
+
+        bt.addEventListener('click', addElemento)
+        
+    </script>
+
+</body>
+</html>
